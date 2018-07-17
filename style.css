@@ -1,0 +1,664 @@
+/*Theme Name: Geek Lar
+
+Theme URI: http://camilaperes.com/
+
+Description: Template Base Responsivo.
+
+Version: 1.3
+
+Author: Camila Peres
+
+Author URI: http://camilaperes.com/ */
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+
+
+/* BASICO
+inset - coloca a sombra para dentro do box
+b24469 - rosa 
+84c492 - verde
+44bab5 - azul turky
+*/
+
+/*	1 NAVIGATION 
+	1.1 MENU TOPO
+	1.2 MENU CATEGORIAS
+	2 HEADER
+*/
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+	color: #171717;
+	font-size: 14px;
+	background: #efefef;}
+
+
+
+/* 	1 NAVIGATION  */
+.nav-flex {
+	width: 90%;
+	display: flex;
+	margin: 0 auto;}
+
+/* 1.1 MENU TOPO */
+.nav-top {
+	width: 100%;
+	font-family: 'Roboto Slab', serif;
+	font-size: 18px;
+	background: #fff;
+	border-top: 8px solid #000000;
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+	box-shadow: 0 0 4px rgba(0, 0, 0, .3)}
+
+.left {
+	justify-content: flex-start;
+	margin: 0 10px;}
+
+.nav-top ul {
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+	text-align: left;}
+
+.nav-top ul li {
+display: inline-block;}
+
+.nav-top ul li a {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: #000;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.nav-top ul li a,
+.nav-top ul li a:after,
+.nav-top ul li a:before {
+	transition: all .5s;}
+
+.nav-top ul li a:hover {
+color: #44bab5;}
+
+/* stroke */
+nav.fill ul li a {
+	position: relative;}
+
+nav.fill ul li a:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 0%;
+	content: '.';
+	color: transparent;
+	background: #44bab5;
+	height: 1px;}
+	
+nav.fill ul li a {
+	transition: all 1s;}
+
+
+nav.fill ul li a:after {
+	text-align: left;
+	content: '.';
+	margin: 0;
+	opacity: 0;}
+
+nav.fill ul li a:hover {
+	color: #fff;
+	z-index: 1;}
+
+nav.fill ul li a:hover:after {
+	z-index: -10;
+	animation: fill 0.5s forwards;
+	-webkit-animation: fill 0.5s forwards;
+	-moz-animation: fill 0.5s forwards;
+	opacity: 1;}
+
+/* icones */
+.reverse {
+	justify-content: flex-end;}
+
+.reverse li a {
+	margin: 0 1px !important;}
+
+
+/* form */
+input {
+	outline: none;}
+
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none;}
+
+input[type=search] {
+	background: #000 url(assets/largeeklar_search.png) no-repeat 9px center;
+	border: solid 1px #000;
+	padding: 2px 9px 0 0;
+	width: 20px;
+		-webkit-transition: all .5s;
+		-moz-transition: all .5s;
+		transition: all .5s;}
+
+input[type=search]:focus {
+	background: #000 url(assets/largeeklar_searchhover.png) no-repeat 9px center;
+	width: 130px;
+	background-color: #fff;
+	border-color: #000;}
+	
+	
+input:-moz-placeholder {
+	color: #000;}
+
+input::-webkit-input-placeholder {
+	color: #000;}
+
+/* buscar */
+#buscar input[type=search] {
+	width: 20px;
+	padding: 0 0 2px 10px;
+	color: transparent;
+	cursor: pointer;}
+	
+#buscar input[type=search]:hover {
+	background: #fff url(assets/largeeklar_searchhover.png) no-repeat 9px center;}
+
+#buscar input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #000;
+	background-color: #fff;
+	cursor: auto;}
+
+#buscar input:-moz-placeholder {
+	color: transparent;}
+
+#buscar input::-webkit-input-placeholder {
+	color: transparent;}
+
+/* NAV Keyframes */
+@-webkit-keyframes fill {
+	0% {
+		width: 0%;
+		height: 6px;}
+	50% {
+		width: 100%;
+		height: 6px;}
+	100% {
+		width: 100%;
+		height: 100%;
+		background: #44bab5;}
+}
+
+/* 1.2 MENU CATEGORIAS */
+.nav-categorias {
+	font-family: 'Roboto Slab', serif;
+	font-size: 20px;
+	width: 100%;
+	height: 70px;
+	margin-bottom: 60px !important;}
+
+nav.nav-categorias ul {
+	width: 100%;
+	border-top: 2px solid #c4c4c4;
+	border-bottom: 2px solid #c4c4c4;
+	float: left;
+	margin: 0;
+	padding: 0;
+	list-style: none;}
+
+nav.nav-categorias ul li {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding:0;
+	color: #000000;}
+
+nav.nav-categorias ul li a {
+	color: #000000;
+	line-height: 62px;
+	text-decoration: none;
+	padding: 5px 30px;
+	text-transform: lowercase;}
+
+
+nav.nav-categorias ul li:hover {
+	background: transparent;
+	color: #000000;}
+
+nav.nav-categorias ul li:hover a {
+	background: url(assets/categorias_hover.png) center no-repeat;
+	color: #FFFFFF; }
+
+
+
+/* 2 HEADER */
+header {
+	max-width: 100%;
+	height: auto;
+	margin: 50px auto;
+	display: block;
+	text-align: center;}
+
+.logo{
+	width: 240px;
+	height: auto;}
+
+.flex {
+	flex-direction: row;}
+
+.container {
+	max-width: 1130px;
+	margin: 0 auto;
+	display: flex;
+	/*border: 1px solid rgb(0, 255, 13);*/
+}
+
+article {
+	width: 780px;
+	margin-right: 30px;
+	background: #FFFFFF;
+	/*border: 1px solid rgb(0, 4, 255);*/
+	font-size: 15px;
+	text-align: justify;
+	line-height: 21px;}
+
+.post-conteudo {
+	padding: 10px 20px 0 20px;}
+
+
+
+.post-data {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #686868;
+	margin-top: 15px;}
+
+.post-title, .post-title a {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 700;
+	font-size: 25px;
+	text-align: center;
+	color: #000000;
+	text-decoration: none;}
+
+.categorias, .categorias a {
+	text-align: center;
+	font-size: 14px;
+	text-transform:uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #44bab5;
+	padding-bottom: 15px;
+	text-decoration: none;}
+
+/* SIDEBAR */
+aside {
+	width: 320px;
+	font-size: 16px;
+	line-height: 20px;}
+
+aside a {
+	text-decoration: none;}
+
+
+.hello {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	color: #000;
+	text-align: center;
+	line-height: 19px;
+	padding: 20px 10px 0 10px;
+	margin-bottom: 15px;}
+
+	.minhas-redes-sociais {
+		text-align: center;
+		margin: 22px auto 22px;
+		width: 100%;}
+	
+	.minhas-redes-sociais a {
+		width: 28px;
+		height: 28px;
+		line-height: 27px;
+		font-size: 1.15em;
+		margin: 0 3px;
+		display: inline-block;
+		background: #44bab5;
+		color: #ffffff !important;
+		border-radius: 50%;}
+		
+		
+	.minhas-redes-sociais a:hover {background: #44bab5; color: #c8c8c8 !important;}
+	
+	.cs-title { margin-left: 5px;}
+	
+	/*titulos diversos*/
+	.box-sidebar h2, .box-sidebar h3, .box-sidebar h4, .box-sidebar h5, .box-sidebar h6 {color: #666;}
+	
+	/*titulo principal*/
+	.box-sidebar h3 {
+		font-family: 'Roboto Slab', serif;
+		font-weight: 700;
+		color: #000000;
+		font-size: 17px;
+		text-align: center;
+		text-transform: uppercase;
+		border-bottom: 0;}
+	
+	.widget-2 .widget-title {
+		background: url(assets/sidebar_01.png) no-repeat;
+		height: 57px;
+		padding: 24px 0 0 0;}
+	
+	.widget-3 .widget-title {
+		background: url(assets/sidebar_02.png) no-repeat;
+		height: 57px;
+		padding: 24px 0 0 0;}
+	
+	
+	.widget-4 .widget-title {
+		background: url(assets/sidebar_03.png) no-repeat;
+		height: 57px;
+		padding: 24px 0 0 0;}
+	
+	
+	.widget-5 .widget-title {
+		background: url(assets/sidebar_04.png) no-repeat;
+		height: 57px;
+		padding: 24px 0 0 0;}
+	
+	
+	.widget-6 .widget-title {
+		background: url(assets/sidebar_01.png) no-repeat;
+		height: 57px;
+		padding: 24px 0 0 0;}
+	
+	
+	.box-sidebar a, .box-sidebar a:link, .box-sidebar a:visited {color: #818181;}
+	.box-sidebar a:hover {color: #44bab5; text-decoration:none;}
+	
+	/*listas sidebar (para arquivos, blogroll, lista categorias etc) */
+	.box-sidebar ul {margin: 0; padding: 0; list-style: none;}
+	.box-sidebar ul li {width: 49%; display: inline-block;}
+	.box-sidebar ul li:before {content: "»"; padding: 0 5px 0 0; color: #999; font-size: .9em}
+	
+	/*busca sidebar*/
+	.box-sidebar .searchform div .screen-reader-text{display: none;}
+	.box-sidebar .searchform div input[type=text] {width: 69%; float: left;}
+	.box-sidebar .searchform div input[type=submit] {width: 29%; float: right;}
+	
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
+	margin-top: 50px;
+	width: 100%;
+	padding: 15px 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #44bab5;
+	font-size: 0.95em;}
+
+footer a {
+	color: #FFFFFF;
+	text-decoration: none;}
+
+	footer a:hover {
+	color: #347c79;}
+
+/* menu harburguer */
+.hamburguer {
+	display: none;
+	justify-content: flex-end;
+
+	background: #000 url(assets/hamburguer.png) no-repeat 3px 5px;
+	height: 30px;
+	width: 30px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Breakpoints */
+
+@media (max-width: 1200px) {
+	.flex {
+		flex-direction: column;}
+	
+	.container {
+		width: 80%;}
+
+	article {
+		width: 100%;}
+	
+	aside {
+		width: 100%;
+		margin-top: 30px;}
+
+	.nav-categorias { display: none; }
+
+}
+
+@media (max-width: 992px) {
+	.flex {
+		flex-direction: column;}
+	
+	.container {
+		width: 90%;}
+
+
+@media (max-width: 768px) {
+	.container {
+		width: 85%;}
+
+	.nav-top {display: none;}
+	.hamburguer {display: flex;}
+
+}
+
+@media (max-width: 576px) {}
+
+
+
+
+
+
+
